@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tester</title>
+    <script type="text/javascript" src="funkcje.js"></script>
+    <script type="text/javascript" src="klasy.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    //Komentarze w skryptach
+
+    runFibonacci();
+    palindromes()
+    let coins = amountToCoins(46, [5, 5, 25, 1, 2]); //istnieją monety o następujących nominałach 25, 10, 5, 2, 1
+    if (coins.length > 0) alert(coins);
+
+    let jsProgrammer = new JavaScriptProgrammer("Stefan");
+    alert(`Ten programista ma na imię ${jsProgrammer.getName()}`);
+    jsProgrammer.findOutWhichLanguageThisProgrammerUses();
+    jsProgrammer.findOutWhatThisProgrammerDoesMostOften();
+    alert(`${jsProgrammer.getName()} programuje już ${jsProgrammer.getExperienceInYears()}`)
+
+    let programmer = new Programmer("Janusz");
+    let name = programmer.getName();
+    programmer.setName("Euzebiusz");
+    alert(`Ten programista miał na imię ${name}, ale teraz nazywa się ${programmer.getName()}`);
+    programmer.findOutWhichLanguageThisProgrammerUses();
+    programmer.findOutWhatThisProgrammerDoesMostOften();
+    alert(`${programmer.getName()} programuje już ${programmer.getExperienceInYears()}`)
+
+    let htmlProgrammer = new HtmlProgrammer("Roman");
+    htmlProgrammer.findOutWhichLanguageThisProgrammerUses();
+    htmlProgrammer.findOutWhatThisProgrammerDoesMostOften();
+    alert(`${htmlProgrammer.getName()} programuje już ${htmlProgrammer.getExperienceInYears()}`)
+
+    alert(`Nikt inny nie potrafi napisać tego co ${htmlProgrammer.getName()}:\n${htmlProgrammer.printContentOfHtmlFile()}`);
+</script>
+</body>
+</html>
